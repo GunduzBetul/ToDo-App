@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ceviche One', cursive;
+}
+
+body{
+    height: 100vh;  
+    width: 100%;
+    background: linear-gradient(60deg, #85BBA6 50%, #BFE5D6 50%);  /*komple bodye arka plan rengi verdik*/
+    
+}
+
+.wrapper{
+    margin: 150px auto;  /*todo app kutusuna konum verdik*/
+    max-width: 500px;  /*genişlik verdik*/
+    width: 100%;
+    background-color: #54092A;  /*kutumuza renk verdik*/
+    border-radius: 10px;  /*kutumuzun kenarlarını ovelleştirdik*/
+    padding: 50px;  /*içerik ve pannding arasına mesafe koyduk*/
+}
+
+.wrapper header{
+    font-size: 30px;  /*yazı boyutu verdik*/
+    font-weight: 600;  /*başlığa genişlik verdik*/
+    color: #FEE6C2;
+}
+
+.wrapper .inputField{
+    display: flex;  /*plus ve inputu yakınlaştırdık*/
+    height: 45px;  /*inputumuza ve butonumuza yükseklik verdik*/
+    width: 100%;
+    margin: 20px 0;  /*sadece alttan-üstten boşluk oluşturduk*/
+    
+}
+
+.inputField input{
+    width: 85%;  /*input alanımıza genişlik verdik*/
+    height: 100%;
+    border: 1px solid #ccc;  /*kenarlık ve renk verdik*/
+    font-size: 17px;  /*input giriş alanında ki yazı boyutunu ayarladık*/
+    border-radius: 10px;  /*input kutusunu ovelleştirdik*/
+    padding-left: 15px;  /*içerik ve padding arasını açtık*/
+    background: white;
+}
+
+.inputField button{
+    width: 50px;  /*+ butonuna genişlik verdik*/
+    height: 100%;  
+    border: none; /*borderleri kaldırdık*/
+    background-color: white;
+    color: green;
+    font-size: 22px;  /*+ işaretini büyüttük*/
+    border-radius: 10px; /*kennarlarını ovelleştirdik*/
+    margin-left: 5px;  /*input alanında uzaklaştırdık*/
+    /* opacity: 0.6; */
+    pointer-events: none;
+    
+}
+
+.inputField button.active{
+    opacity: 1;
+    pointer-events: auto;
+    
+}
+
+
+.wrapper .todoList{
+    max-height: 250px;
+    overflow-y: auto;
+
+}
+
+.todoList li{
+    list-style: none;  /*default özelliklerini kaldırdık*/
+    height: 45px;  /*yükseklik vererek aralarını açtık*/
+    line-height: 45px;  /* satırlar arasındaki mevcut yükseklik değerini verdik*/
+    position: relative;  /*göreceli konumlandırdık*/
+    background: honeydew;
+    border-radius: 10px;
+    margin-bottom: 8px;  /*alt kısımdan değer verdik bu biribirinden ayırdı kutucukları*/
+    padding: 0 15px;  /*sadece sağdan-soldan değer verdik içeriği kutudan uzaklaştırdı*/
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoList li span{
+    position: absolute;  /*delete kutuları yakınlaştı*/
+    right: -45px;  /*içerikten uzaklaştırdık*/
+    color: white;
+    background: red;
+    width: 35px;
+    text-align: center;  /*çöp kutusunu kendi içinde ortaladık*/
+    border-radius: 0 3px 3px 0px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.todoList li:hover span{
+    right: 0px;
+}
+
+.wrapper .footer{
+    display: flex;  /*clear butonunu içeriğe yakınlaştırdı ortaladı*/
+    width: 100%;
+    margin-top: 25px;  /*üstten değer girip yapılcakklardan uzaklaştırdık*/
+    justify-content: space-between;  /*İlk eleman en başta, son eleman da en sonda olacak şekilde ortalama ve hizalama yapar. */
+    align-items: center;
+}
+
+.footer button{
+    border: none;
+    outline: none;
+    background: white;
+    color: green;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+
+.footer span{
+    color: blanchedalmond;
+}
+
+
+
+
